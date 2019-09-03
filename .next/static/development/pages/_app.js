@@ -31,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\reduxAPI\\tooploox\\lib\\with-redux-store.js";
+var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\ReduxForm\\lib\\with-redux-store.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
 
 /* 
@@ -15563,7 +15563,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\reduxAPI\\tooploox\\pages\\_app.js";
+var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\ReduxForm\\pages\\_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 /* 

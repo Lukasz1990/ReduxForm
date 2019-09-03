@@ -109,7 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store */ "./store.js");
 
 
-var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\reduxAPI\\tooploox\\lib\\with-redux-store.js";
+var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\ReduxForm\\lib\\with-redux-store.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 /* 
@@ -893,7 +893,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _lib_with_redux_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/with-redux-store */ "./lib/with-redux-store.js");
 
-var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\reduxAPI\\tooploox\\pages\\_app.js";
+var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\ReduxForm\\pages\\_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 /* 

@@ -1115,7 +1115,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
 
 
-var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\reduxAPI\\tooploox\\pages\\_document.js";
+var _jsxFileName = "C:\\Users\\Magdalena\\Desktop\\ReduxForm\\pages\\_document.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -1147,6 +1147,48 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_3___default.a {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return __jsx(next_document__WEBPACK_IMPORTED_MODULE_3__["Html"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_3__["Head"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, __jsx("link", {
+      href: "/static/css/bootstrap.min.css",
+      rel: "stylesheet",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    })), __jsx("body", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_3__["Main"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_3__["NextScript"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    })));
   }
 
 }

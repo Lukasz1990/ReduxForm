@@ -11,8 +11,8 @@ const S = {
       border-radius: 40px;
       font-size: 14px;
       color: rgba(57, 67, 68, 0.8);
-      width: 170px;  
-      height: 60px;
+      width: 100px;  
+      height: 40px;
       font-weight: bold;
       font-style: normal;
       margin-top:10px;
@@ -23,26 +23,19 @@ const S = {
         background-color:#ddd;
         color:#fff;
       }
-      ${props => props.disabled && css`
-      background: #cecece;
-      cursor: not-allowed;
-      &:hover {
-        background: #cecece;
-      }
-    `}
     `
 }
 
 
-const Button = ({ children,OnClick,disabled }) => {
+const Button = ({ children,OnClick }) => {
 
   const onClick = () => {
-      if (disabled) return
+
       OnClick(event)
     }
 
     return (
-        <S.Button  onClick={onClick} disabled={disabled}> 
+        <S.Button  onClick={onClick}> 
             {children}
         </S.Button>
     )
