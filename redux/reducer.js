@@ -1,4 +1,4 @@
-import ACTION_TYPES from './actions'
+// import ACTION_TYPES from './actions'
 
 const defaultState = {
   data: [],
@@ -6,7 +6,7 @@ const defaultState = {
 
 const usersReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case ACTION_TYPES.USER_SUBMITTED:
+    case 'USER_SUBMITTED':
             return {
               ...state,
               data: [ ...state.data, {

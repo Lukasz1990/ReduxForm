@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import { connect } from 'react-redux'
-import { userSubmitted } from '../redux/actions'
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
 
 const S = {
   Wrapper: styled.div`
@@ -32,33 +30,15 @@ const S = {
     font-weight:600;
   `
 }
-const Index = ({ data,userSubmitted }) => {
+const Index = () => {
   return (
     <S.Wrapper>
         <S.Row>
         <S.Title>Heroes Form</S.Title>
-        {/* <Link  href='../components/UserForm'>
-            <a>User Form</a>
-          </Link> */}
-         {/* <UserForm onSubmit={userSubmitted}/> */}
-         <Layout data={data} onSubmit={userSubmitted}/>
-           
+         <Layout/>
         </S.Row>
     </S.Wrapper>
   )
 }
 
-
-
-const mapStateToProps = state => ({
-  data: state.usersReducer.data,
-})
-
-
-
-export default connect(
-    mapStateToProps,
-    {
-      userSubmitted,
-    }
-  )(Index)
+export default Index

@@ -3,8 +3,7 @@ import { Form, FormGroup, Label, Input } from 'reactstrap';
 import Button from '../components/Button'
 import { useState } from 'react'
 import Layout from '../components/Layout'
-import { connect } from 'react-redux'
-import { userSubmitted } from '../redux/actions'
+import { useDispatch } from 'react-redux'
 
 const S = {
     UserForm: styled.div`
@@ -79,7 +78,8 @@ const S = {
     `,
   }
 
-const UserForm =  ({ userSubmitted }) => {
+const UserForm =  () => {
+  const dispatch = useDispatch()
 
   const [emailValue, setEmailValue] = useState('')
   const [heroProfecyValue, setHeroProfecyValue] = useState()
@@ -98,13 +98,17 @@ const UserForm =  ({ userSubmitted }) => {
   const errorMagic = !magicValue ? <S.ErrorMessage>Hero magic is not selected!</S.ErrorMessage> : null
 
   const validateForm = () => {
-    userSubmitted({
-      email: emailValue,
-      userId: Math.random(),
-      hero_profecy: heroProfecyValue,
-      hero_intro: heroIntroValue,
-      hero_magic: magicValue,
-      checked: checkData
+    
+    dispatch({
+      type:'USER_SUBMITTED',
+      payload:({
+        email: emailValue,
+        userId: Math.random(),
+        hero_profecy: heroProfecyValue,
+        hero_intro: heroIntroValue,
+        hero_magic: magicValue,
+        checked: checkData
+      })
     })
     alert('User added')
   }
@@ -114,8 +118,7 @@ const onSubmitHandler = (event)=> {
   setbuttonDefault(true)
   if (disabled) {
     validateForm()
-  }
-    
+    }
   }
 
   return (
@@ -182,7 +185,6 @@ const onSubmitHandler = (event)=> {
           </Label>
           { buttonDefault  &&  errorCheck }
           <Button value={buttonDefault} OnClick={(event)=>onSubmitHandler(event)}>Submit</Button>
-
         </FormGroup>
       </Form>
     </S.Content>
@@ -190,12 +192,5 @@ const onSubmitHandler = (event)=> {
 </Layout>
  )
 }
-   const mapStateToProps = state => ({
-  })
-  
-  export default connect(
-      mapStateToProps,
-      {
-        userSubmitted,
-      }
-    )(UserForm)
+
+export default UserForm

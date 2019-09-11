@@ -1,9 +1,9 @@
 import { Table } from 'reactstrap'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
-import { connect } from 'react-redux'
 import Button from '../components/Button'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
 
 const S = {
   Table: styled(Table)`
@@ -29,7 +29,8 @@ const S = {
   `
 }
 
-const UserInfo = ({ data }) => {
+const UserInfo = () => {
+  const data = useSelector(state=>state.usersReducer.data)
   return (
    <Layout>
     <h1>Users List</h1>
@@ -65,14 +66,4 @@ const UserInfo = ({ data }) => {
   )
 }
 
-const mapStateToProps = state => ({
-  data: state.usersReducer.data,
-})
-
-
-
-export default connect(
-    mapStateToProps,
-    {
-    }
-  )(UserInfo)
+export default UserInfo

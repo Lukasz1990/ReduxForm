@@ -952,29 +952,6 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
 
 /***/ }),
 
-/***/ "./redux/actions.js":
-/*!**************************!*\
-  !*** ./redux/actions.js ***!
-  \**************************/
-/*! exports provided: userSubmitted, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userSubmitted", function() { return userSubmitted; });
-const ACTION_TYPES = {
-  USER_SUBMITTED: 'USER_SUBMITED'
-};
-const userSubmitted = payload => {
-  return {
-    type: ACTION_TYPES.USER_SUBMITTED,
-    payload
-  };
-};
-/* harmony default export */ __webpack_exports__["default"] = (ACTION_TYPES);
-
-/***/ }),
-
 /***/ "./redux/reducer.js":
 /*!**************************!*\
   !*** ./redux/reducer.js ***!
@@ -985,16 +962,15 @@ const userSubmitted = payload => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions */ "./redux/actions.js");
 
-
+// import ACTION_TYPES from './actions'
 const defaultState = {
   data: []
 };
 
 const usersReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_1__["default"].USER_SUBMITTED:
+    case 'USER_SUBMITTED':
       return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
         data: [...state.data, Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, action.payload)]
       });

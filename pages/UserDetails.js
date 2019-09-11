@@ -1,7 +1,7 @@
 import { Table } from 'reactstrap'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 const S = {
   Table: styled(Table)`
@@ -26,8 +26,8 @@ const S = {
   font-style: normal;
   `
 }
-
-const UserDetails = ({ data }) => {
+const UserDetails = () => {
+  const data = useSelector(state=>state.usersReducer.data)
   return (
    <Layout>
     <h1>Users List</h1>
@@ -49,12 +49,4 @@ const UserDetails = ({ data }) => {
   )
 }
 
-const mapStateToProps = state => ({
-    data: state.usersReducer.data,
-  })
-
-  export default connect(
-      mapStateToProps,
-      {
-      }
-    )(UserDetails)
+export default UserDetails
