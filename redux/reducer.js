@@ -1,4 +1,3 @@
-// import ACTION_TYPES from './actions'
 
 const defaultState = {
   data: [],
