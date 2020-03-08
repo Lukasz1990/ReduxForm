@@ -31,6 +31,7 @@ const S = {
 
 const UserInfo = () => {
   const data = useSelector(state=>state.usersReducer.data)
+
   return (
    <Layout>
     <h1>Users List</h1>

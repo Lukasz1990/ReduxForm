@@ -1,9 +1,11 @@
 import styled, { css } from 'styled-components'
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import Button from '../components/Button'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Layout from '../components/Layout'
 import { useDispatch } from 'react-redux'
+import { submitUser } from './../redux/submitUser'
+import  { getRepos }  from './../redux/getRepos'
 
 const S = {
     UserForm: styled.div`
@@ -78,7 +80,10 @@ const S = {
     `,
   }
 
-const UserForm =  () => {
+const UserForm =  ({}) => {
+
+ 
+  
   const dispatch = useDispatch()
 
   const [emailValue, setEmailValue] = useState('')
@@ -99,17 +104,16 @@ const UserForm =  () => {
 
   const validateForm = () => {
     
-    dispatch({
-      type:'USER_SUBMITTED',
-      payload:({
+    dispatch(submitUser(
+      {
         email: emailValue,
         userId: Math.random(),
         hero_profecy: heroProfecyValue,
         hero_intro: heroIntroValue,
         hero_magic: magicValue,
         checked: checkData
-      })
-    })
+      }
+    ))
     alert('User added')
   }
 
@@ -120,6 +124,10 @@ const onSubmitHandler = (event)=> {
     validateForm()
     }
   }
+
+  useEffect(() => {
+    dispatch(getRepos())
+  },[])
 
   return (
    <Layout>
